@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --head-color: #3573e7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    font-family: system-ui;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-thickness: 0.35rem;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--head-color);
+    -webkit-box-shadow: 0px 10px 25px 5px var(--head-color);
+    -moz-box-shadow: 0px 10px 25px 5px var(--head-color);
+    box-shadow: 0px 10px 25px 5px var(--head-color);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--head-color);
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    -webkit-box-shadow: 0px -10px 25px 5px var(--head-color);
+    -moz-box-shadow: 0px -10px 25px 5px var(--head-color);
+    box-shadow: 0px -10px 25px 5px var(--head-color);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.color-to-pick {
+    margin-top: 2rem;
+    border: 0.5rem dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.given-color {
+    font-weight: bolder;
+}
+
+.playfield {
+    margin-top: 4rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.option {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 1rem;
+    border: 0.5rem solid black;
+    cursor: pointer;
+}
+
+.option:hover,
+.option:focus {
+    opacity: 0.7;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
